@@ -3,62 +3,231 @@
     <!-- Logo zone -->
     <div class="sidebar-logo">
       <div class="sidebar-brand-wrap">
-        <span class="sidebar-brand">{{ t('nav.companyName') }}</span>
-        <span class="sidebar-tagline">{{ t('nav.subtitle') }}</span>
+        <span class="sidebar-brand">{{ t("nav.companyName") }}</span>
+        <span class="sidebar-tagline">{{ t("nav.subtitle") }}</span>
       </div>
       <button
         class="sidebar-toggle"
         @click="toggle"
         :title="isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'"
       >
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <path d="M10 3L6 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M10 3L6 8L10 13"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
         </svg>
       </button>
     </div>
 
     <!-- Navigation -->
     <nav class="sidebar-nav">
-      <RouterLink to="/" class="nav-link" :class="{ active: route.path === '/' }" data-tooltip="Overview">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <rect x="2" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-          <rect x="9" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-          <rect x="2" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
-          <rect x="9" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+      <RouterLink
+        to="/"
+        class="nav-link"
+        :class="{ active: route.path === '/' }"
+        data-tooltip="Overview"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <rect
+            x="2"
+            y="2"
+            width="5"
+            height="5"
+            rx="1"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <rect
+            x="9"
+            y="2"
+            width="5"
+            height="5"
+            rx="1"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <rect
+            x="2"
+            y="9"
+            width="5"
+            height="5"
+            rx="1"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <rect
+            x="9"
+            y="9"
+            width="5"
+            height="5"
+            rx="1"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
         </svg>
-        <span class="nav-text">{{ t('nav.overview') }}</span>
+        <span class="nav-text">{{ t("nav.overview") }}</span>
       </RouterLink>
-      <RouterLink to="/inventory" class="nav-link" :class="{ active: route.path === '/inventory' }" data-tooltip="Inventory">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <rect x="2" y="2" width="12" height="12" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M5 6h6M5 9h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <RouterLink
+        to="/inventory"
+        class="nav-link"
+        :class="{ active: route.path === '/inventory' }"
+        data-tooltip="Inventory"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <rect
+            x="2"
+            y="2"
+            width="12"
+            height="12"
+            rx="1.5"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <path
+            d="M5 6h6M5 9h4"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
         </svg>
-        <span class="nav-text">{{ t('nav.inventory') }}</span>
+        <span class="nav-text">{{ t("nav.inventory") }}</span>
       </RouterLink>
-      <RouterLink to="/orders" class="nav-link" :class="{ active: route.path === '/orders' }" data-tooltip="Orders">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <path d="M3 4h10M3 8h7M3 12h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <RouterLink
+        to="/orders"
+        class="nav-link"
+        :class="{ active: route.path === '/orders' }"
+        data-tooltip="Orders"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M3 4h10M3 8h7M3 12h5"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
         </svg>
-        <span class="nav-text">{{ t('nav.orders') }}</span>
+        <span class="nav-text">{{ t("nav.orders") }}</span>
       </RouterLink>
-      <RouterLink to="/spending" class="nav-link" :class="{ active: route.path === '/spending' }" data-tooltip="Finance">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M8 5v1.5M8 9.5V11M6.5 7.25C6.5 6.56 7.17 6 8 6s1.5.56 1.5 1.25c0 1.5-3 1.5-3 3C6.5 11 7.17 11 8 11s1.5-.44 1.5-1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+      <RouterLink
+        to="/spending"
+        class="nav-link"
+        :class="{ active: route.path === '/spending' }"
+        data-tooltip="Finance"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <circle
+            cx="8"
+            cy="8"
+            r="6"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <path
+            d="M8 5v1.5M8 9.5V11M6.5 7.25C6.5 6.56 7.17 6 8 6s1.5.56 1.5 1.25c0 1.5-3 1.5-3 3C6.5 11 7.17 11 8 11s1.5-.44 1.5-1"
+            stroke="currentColor"
+            stroke-width="1.3"
+            stroke-linecap="round"
+          />
         </svg>
-        <span class="nav-text">{{ t('nav.finance') }}</span>
+        <span class="nav-text">{{ t("nav.finance") }}</span>
       </RouterLink>
-      <RouterLink to="/demand" class="nav-link" :class="{ active: route.path === '/demand' }" data-tooltip="Demand Forecast">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <path d="M2 12l4-4 3 2 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <RouterLink
+        to="/demand"
+        class="nav-link"
+        :class="{ active: route.path === '/demand' }"
+        data-tooltip="Demand Forecast"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M2 12l4-4 3 2 5-6"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
         </svg>
-        <span class="nav-text">{{ t('nav.demandForecast') }}</span>
+        <span class="nav-text">{{ t("nav.demandForecast") }}</span>
       </RouterLink>
-      <RouterLink to="/reports" class="nav-link" :class="{ active: route.path === '/reports' }" data-tooltip="Reports">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <rect x="2" y="8" width="3" height="6" rx="0.5" stroke="currentColor" stroke-width="1.5"/>
-          <rect x="6.5" y="5" width="3" height="9" rx="0.5" stroke="currentColor" stroke-width="1.5"/>
-          <rect x="11" y="2" width="3" height="12" rx="0.5" stroke="currentColor" stroke-width="1.5"/>
+      <RouterLink
+        to="/reports"
+        class="nav-link"
+        :class="{ active: route.path === '/reports' }"
+        data-tooltip="Reports"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <rect
+            x="2"
+            y="8"
+            width="3"
+            height="6"
+            rx="0.5"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <rect
+            x="6.5"
+            y="5"
+            width="3"
+            height="9"
+            rx="0.5"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <rect
+            x="11"
+            y="2"
+            width="3"
+            height="12"
+            rx="0.5"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
         </svg>
         <span class="nav-text">Reports</span>
       </RouterLink>
@@ -71,8 +240,19 @@
     </div>
     <div v-else class="sidebar-filters-collapsed">
       <button class="filter-icon-btn" @click="expand" title="Filters">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <path d="M2 4h12M4 8h8M6 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M2 4h12M4 8h8M6 12h4"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
         </svg>
         <span v-if="hasActiveFilters" class="filter-active-dot"></span>
       </button>
@@ -80,6 +260,55 @@
 
     <!-- Bottom: language + profile -->
     <div class="sidebar-bottom">
+      <button
+        class="dark-toggle-btn"
+        @click="toggleDark"
+        :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+      >
+        <!-- Sun icon — shown in dark mode -->
+        <svg
+          v-if="isDark"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <circle
+            cx="8"
+            cy="8"
+            r="3"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <path
+            d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3.4 3.4l1.06 1.06M11.54 11.54l1.06 1.06M3.4 12.6l1.06-1.06M11.54 4.46l1.06-1.06"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+        </svg>
+        <!-- Moon icon — shown in light mode -->
+        <svg
+          v-else
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M13.5 10.5A6 6 0 0 1 5.5 2.5a5.5 5.5 0 1 0 8 8z"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <span class="dark-toggle-label">{{
+          isDark ? "Light mode" : "Dark mode"
+        }}</span>
+      </button>
       <LanguageSwitcher />
       <ProfileMenu
         @show-profile-details="$emit('show-profile-details')"
@@ -90,34 +319,36 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
-import { useRoute } from 'vue-router'
-import { useI18n } from '../composables/useI18n'
-import { useSidebar } from '../composables/useSidebar'
-import { useFilters } from '../composables/useFilters'
-import FilterBar from './FilterBar.vue'
-import LanguageSwitcher from './LanguageSwitcher.vue'
-import ProfileMenu from './ProfileMenu.vue'
+import { onMounted, onUnmounted } from "vue";
+import { useRoute } from "vue-router";
+import { useI18n } from "../composables/useI18n";
+import { useSidebar } from "../composables/useSidebar";
+import { useDarkMode } from "../composables/useDarkMode";
+import { useFilters } from "../composables/useFilters";
+import FilterBar from "./FilterBar.vue";
+import LanguageSwitcher from "./LanguageSwitcher.vue";
+import ProfileMenu from "./ProfileMenu.vue";
 
-defineEmits(['show-profile-details', 'show-tasks'])
+defineEmits(["show-profile-details", "show-tasks"]);
 
-const { t } = useI18n()
-const route = useRoute()
-const { isCollapsed, toggle, expand } = useSidebar()
-const { hasActiveFilters } = useFilters()
+const { t } = useI18n();
+const route = useRoute();
+const { isCollapsed, toggle, expand } = useSidebar();
+const { isDark, toggle: toggleDark } = useDarkMode();
+const { hasActiveFilters } = useFilters();
 
 const handleResize = () => {
-  if (window.innerWidth < 1024) isCollapsed.value = true
-}
+  if (window.innerWidth < 1024) isCollapsed.value = true;
+};
 
 onMounted(() => {
-  if (window.innerWidth < 1024) isCollapsed.value = true
-  window.addEventListener('resize', handleResize)
-})
+  if (window.innerWidth < 1024) isCollapsed.value = true;
+  window.addEventListener("resize", handleResize);
+});
 
 onUnmounted(() => {
-  window.removeEventListener('resize', handleResize)
-})
+  window.removeEventListener("resize", handleResize);
+});
 </script>
 
 <style scoped>
@@ -194,7 +425,9 @@ onUnmounted(() => {
   border-radius: 6px;
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
   padding: 0;
 }
 
@@ -237,7 +470,9 @@ onUnmounted(() => {
   font-size: 0.875rem;
   font-weight: 500;
   text-decoration: none;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -327,7 +562,9 @@ onUnmounted(() => {
   border-radius: 6px;
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
   padding: 0;
 }
 
@@ -427,5 +664,40 @@ onUnmounted(() => {
 
 .app-sidebar.collapsed .sidebar-bottom {
   align-items: center;
+}
+
+.dark-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.dark-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Icon-only when sidebar is collapsed */
+.app-sidebar.collapsed .dark-toggle-btn {
+  justify-content: center;
+  padding: 0.5rem;
+  width: 32px;
+}
+
+.app-sidebar.collapsed .dark-toggle-label {
+  display: none;
 }
 </style>
